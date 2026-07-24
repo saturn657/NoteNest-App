@@ -2,7 +2,7 @@ import { ArrowRight, PlayCircle, CheckCircle2 } from "lucide-react";
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-cyan-50">
+    <section className="relative overflow-hidden bg-linear-to-br from-indigo-50 via-white to-cyan-50">
 
       <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-indigo-300/30 blur-3xl"></div>
 
