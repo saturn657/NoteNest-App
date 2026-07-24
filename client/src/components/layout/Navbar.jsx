@@ -1,12 +1,11 @@
-import { FaRegStickyNote } from "react-icons/fa";
-
+import { NotebookPen } from "lucide-react";
 function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         <div className="flex items-center gap-2">
-          <FaRegStickyNote className="text-indigo-600 text-2xl" />
+            <NotebookPen className="h-7 w-7 text-indigo-600" />         
           <h1 className="text-2xl font-bold text-slate-800">
             NoteNest
           </h1>
