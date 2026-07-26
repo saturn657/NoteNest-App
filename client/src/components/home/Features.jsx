@@ -25,11 +25,10 @@ function Features() {
 
         <div className="text-center">
           <h2 className="text-4xl font-bold text-slate-900">
-            Everything You Need
-          </h2>
+            Everything You Need to Stay Productive          </h2>
 
           <p className="mt-4 text-lg text-slate-600">
-            Powerful features to help you stay organized and productive.
+            A modern workspace packed with features to help you capture ideas, organize notes and focus on what matters.
           </p>
         </div>
 
@@ -41,11 +40,9 @@ function Features() {
             return (
               <div
                 key={index}
-                className="rounded-3xl bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
-              >
+                className="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-3 hover:border-indigo-200 hover:shadow-2xl"              >
 
-                <div className="mb-6 inline-flex rounded-2xl bg-indigo-100 p-4">
-                  <Icon className="h-8 w-8 text-indigo-600" />
+                <div className="mb-6 inline-flex rounded-2xl bg-linear-to-br from-indigo-100 to-cyan-100 p-4 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">                  <Icon className="h-8 w-8 text-indigo-600" />
                 </div>
 
                 <h3 className="text-2xl font-semibold text-slate-900">
