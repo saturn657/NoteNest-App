@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 function CTA() {
   return (
-    <section className="bg-gradient-to-r from-indigo-600 to-violet-600 py-24">
+    <section className="bg-linear-to-r from-indigo-600 to-violet-600 py-24">
 
       <div className="mx-auto max-w-4xl px-6 text-center">
 
