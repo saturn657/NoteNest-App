@@ -1,15 +1,25 @@
-function Dashboard(){
+import Sidebar from "../components/dashboard/Sidebar";
+import Topbar from "../components/dashboard/Topbar";
+import WelcomeBanner from "../components/dashboard/WelcomeBanner";
+import DashboardStats from "../components/dashboard/DashboardStats";
+import NotesGrid from "../components/dashboard/NotesGrid";
 
-    return(
+function Dashboard() {
+  return (
+    <div className="flex min-h-screen bg-slate-100">
+      <Sidebar />
 
-        <h1 className="text-5xl text-center mt-40">
+      <div className="flex-1">
+        <Topbar />
 
-            Dashboard Page
-
-        </h1>
-
-    );
-
+        <main className="p-8">
+          <WelcomeBanner />
+          <DashboardStats />
+          <NotesGrid />
+        </main>
+      </div>
+    </div>
+  );
 }
 
 export default Dashboard;
