@@ -21,7 +21,7 @@ function CTA() {
 
         <div className="mt-10 flex flex-wrap justify-center gap-5">
 
-          <button className="rounded-xl bg-white px-8 py-4 font-semibold text-indigo-700 transition hover:scale-105">
+          <button to="/signup" className="rounded-xl bg-white px-8 py-4 font-semibold text-indigo-700 transition hover:scale-105">
 
             Get Started
 
