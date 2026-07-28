@@ -2,7 +2,7 @@ import { Sparkles } from "lucide-react";
 
 function WelcomeBanner() {
   return (
-    <section className="mb-8 rounded-3xl bg-gradient-to-r from-indigo-600 to-violet-600 p-8 text-white">
+    <section className="mb-8 rounded-3xl bg-linear-to-r from-indigo-600 to-violet-600 p-8 text-white">
 
       <div className="flex items-center justify-between">
 
