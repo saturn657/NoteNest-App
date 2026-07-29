@@ -4,11 +4,11 @@ import {
   Plus
 } from "lucide-react";
 
-function Topbar() {
+function Topbar({ onAddNote }) {
   return (
     <header className="flex items-center justify-between border-b border-slate-200 bg-white px-8 py-5">
 
-      <div className="relative w-105">
+      <div className="relative w-[420px]">
 
         <Search
           size={18}
@@ -25,17 +25,18 @@ function Topbar() {
 
       <div className="flex items-center gap-5">
 
-        <button className="flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white transition hover:bg-indigo-700">
-
-          <Plus size={18}/>
+        <button
+          onClick={onAddNote}
+          className="flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white transition hover:bg-indigo-700"
+        >
+          <Plus size={18} />
 
           New Note
-
         </button>
 
         <button className="rounded-full bg-slate-100 p-3 transition hover:bg-slate-200">
 
-          <Bell size={20}/>
+          <Bell size={20} />
 
         </button>
 

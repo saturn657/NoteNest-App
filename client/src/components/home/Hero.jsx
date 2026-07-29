@@ -42,12 +42,7 @@ function Hero() {
             <button className="flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-8 py-4 font-semibold transition hover:bg-slate-100">
 
               <PlayCircle size={20} />
-              <a
-              href="#how-it-works"
-              className="inline-flex items-center justify-center rounded-xl border border-slate-300 px-6 py-3 font-semibold hover:bg-slate-100"
-              >
               Watch Demo
-              </a>
             </button>
 
           </div>
