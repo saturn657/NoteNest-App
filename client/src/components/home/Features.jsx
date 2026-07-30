@@ -36,7 +36,6 @@ function Features() {
 
           {features.map((feature, index) => {
             const Icon = feature.icon;
-
             return (
               <div
                 key={index}
