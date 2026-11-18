@@ -8,6 +8,7 @@ import AddNoteModal from "../components/dashboard/AddNoteModal";
 
 function Dashboard() {
   const [openModal, setOpenModal] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const [notes, setNotes] = useState([
     {
       id: 1,
@@ -31,19 +32,28 @@ function Dashboard() {
     },
   ]);
 
+  const normalizedSearch = searchTerm.trim().toLowerCase();
+  const filteredNotes = notes.filter((note) =>
+    `${note.title} ${note.description}`.toLowerCase().includes(normalizedSearch)
+  );
+
   return (
     <div className="flex min-h-screen bg-slate-100">
       <Sidebar />
 
       <div className="flex-1">
-        <Topbar onAddNote={() => setOpenModal(true)} />
+        <Topbar
+          onAddNote={() => setOpenModal(true)}
+          searchTerm={searchTerm}
+          onSearchChange={setSearchTerm}
+        />
 
         <main className="p-8">
           <WelcomeBanner />
 
           <DashboardStats />
 
-          <NotesGrid notes={notes} />
+          <NotesGrid notes={filteredNotes} searchTerm={searchTerm} />
         </main>
       </div>
 

@@ -1,6 +1,6 @@
 import { Search, Bell, Plus } from "lucide-react";
 
-function Topbar({ onAddNote }) {
+function Topbar({ onAddNote, searchTerm, onSearchChange }) {
   return (
     <header className="flex items-center justify-between border-b border-slate-200 bg-white px-8 py-5">
       <div className="relative w-105">
@@ -10,14 +10,18 @@ function Topbar({ onAddNote }) {
         />
 
         <input
-          type="text"
+          type="search"
+          aria-label="Search notes by title or description"
           placeholder="Search your notes..."
+          value={searchTerm}
+          onChange={(event) => onSearchChange(event.target.value)}
           className="w-full rounded-xl border border-slate-300 py-3 pl-11 pr-4 outline-none transition focus:border-indigo-500"
         />
       </div>
 
       <div className="flex items-center gap-5">
         <button
+          type="button"
           onClick={onAddNote}
           className="flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white transition hover:bg-indigo-700"
         >
@@ -25,7 +29,11 @@ function Topbar({ onAddNote }) {
           New Note
         </button>
 
-        <button className="rounded-full bg-slate-100 p-3 transition hover:bg-slate-200">
+        <button
+          type="button"
+          aria-label="Notifications"
+          className="rounded-full bg-slate-100 p-3 transition hover:bg-slate-200"
+        >
           <Bell size={20} />
         </button>
 
